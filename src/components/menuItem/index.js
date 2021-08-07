@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { withRouter } from "react-router-dom";
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
+const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => {
   console.log(imageUrl);
   return (
     <div
