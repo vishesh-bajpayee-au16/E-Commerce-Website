@@ -8,13 +8,8 @@ const Directory = () => {
   console.log(HomePageMenuData);
   return (
     <div className="directory-menu">
-      {menuData.map(({ title, id, imageUrl, size }) => (
-        <MenuItem
-          size={size}
-          title={title.toUpperCase()}
-          key={id}
-          imageUrl={imageUrl}
-        />
+      {menuData.map(({ id, ...otherMenuProps }) => (
+        <MenuItem key={id} {...otherMenuProps} />
       ))}
     </div>
   );
