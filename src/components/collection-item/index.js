@@ -1,7 +1,7 @@
 import React from "react";
 import CustomButton from "../CustomButton";
 import "./index.scss";
-import { addItemToCart } from "../../redux/actions/cartActions";
+import { addItemToCart,  } from "../../redux/actions/cartActions";
 import { useDispatch } from "react-redux";
 
 const CollectionItem = ({ item }) => {
