@@ -4,4 +4,5 @@ export const actionTypes = {
 
 export const cartActionTypes = {
   toggleCart: "TOGGLE_CART_HIDDEN",
+  addItem: "ADD_ITEM",
 };
