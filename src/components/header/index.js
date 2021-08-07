@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { auth } from "../../firebase/firebase.utils";
 import { useSelector } from "react-redux";
+import CartIcon from "../cart-icon";
+import CartDropdown from "../cart-dropdown";
 import "./index.scss";
 const Header = () => {
+  const hidden = useSelector((state) => state.cart.hidden);
   const user = useSelector((state) => state.user.currentUser);
   console.log(user);
   return (
@@ -30,7 +33,9 @@ const Header = () => {
             SIGN IN
           </Link>
         )}
+        <CartIcon />
       </div>
+      {hidden ? null : <CartDropdown />}
     </div>
   );
 };
