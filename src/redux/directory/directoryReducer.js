@@ -1,4 +1,4 @@
-const sections = [
+const INTIAL_STATE = [
   {
     title: "hats",
     imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
@@ -33,4 +33,11 @@ const sections = [
   },
 ];
 
-export default sections;
+const directoryReducer = (state = INTIAL_STATE, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+export default directoryReducer;

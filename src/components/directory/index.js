@@ -1,14 +1,13 @@
 import React from "react";
 import MenuItem from "../menuItem";
-import HomePageMenuData from "../../database/homePageMenuData";
-import { useState } from "react";
+import { useSelector } from "react-redux";
 import "./index.scss";
 const Directory = () => {
-  const [menuData, setMenuData] = useState(HomePageMenuData);
-  console.log(HomePageMenuData);
+  const directory = useSelector((state) => state.directory);
+
   return (
     <div className="directory-menu">
-      {menuData.map(({ id, ...otherMenuProps }) => (
+      {directory.map(({ id, ...otherMenuProps }) => (
         <MenuItem key={id} {...otherMenuProps} />
       ))}
     </div>
